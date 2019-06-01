@@ -5,17 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
-    <title>Kalix: coming soon</title>
+    <title>Kalix</title>
 
     <style>
+      @font-face {
+        font-family: "Eurostile-Ext-Bold";
+        font-style: none;
+        font-weight: 700;
+        src: local("Eurostile-Extended-Bold"),
+        local("Eurostile Extended Bold"),
+        url("./Eurostile-Extended-Bold.woff2") format('woff2');
+      }
+
+      @font-face {
+        font-family: "Eurostile";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Eurostile"),
+        url("./Eurostile.woff2") format('woff2');
+      }
+
       html {
         height: 100%;
       }
-      
+
       body {
         font-family: 'IBM Plex Sans', sans-serif;
         height: 100%;
-        text-align: center;
+      }
+
+      h1, h2, h3 {
+        font-family: "Eurostile", sans-serif;
+        font-weight: normal;
+        margin: 0;
+      }
+
+      h2 {
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.5em;
       }
 
       .vert-container {
@@ -35,24 +65,68 @@
         width: 80%;
         max-width: 540px;
       }
-        
+
       .kalix-logo {
-        margin-bottom: 1em;
+        display: block;
+        height: 200px;
       }
+
+      .title-text {
+        display: inline-block;
+        margin-left: 150px;
+        margin-top: -20px;
+      }
+
+      .kalix-name {
+        height: 50px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E97149;
+      }
+
+      .coming-soon {
+        margin-top: .3em;
+      }
+
+      @media screen and (max-width: 700px) {
+        .kalix-logo {
+          margin: auto;
+        }
+
+        .title-text {
+          display: block;
+          margin: 4em auto 0;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .kalix-name {
+          width: 80vw;
+        }
+
+        .subtitle {
+          font-size: 6vw;
+        }
+
+        .coming-soon {
+          font-size: 5vw;
+        }
+
+      }
+
     </style>
   </head>
+
   <body>
     <div class="vert-container">
       <div class="horiz-container">
         <div class="content">
-          <div class="header">
-            <div>
-              <img src="./kalix-logo.svg" class="kalix-logo" alt="Kalix logo">
-            </div>
+          <img src="./3d-glyph.png" class="kalix-logo">
+          <div class="title-text">
+            <img src="./kalix-name.svg" class="kalix-name">
+            <h2 class="subtitle">Refactoring cloud computing</h2>
+            <h3 class="coming-soon">Site launch summer 2019</h2>
           </div>
-          <h2>
-            Coming soon
-          </h2>
         </div>
       </div>
     </div>
